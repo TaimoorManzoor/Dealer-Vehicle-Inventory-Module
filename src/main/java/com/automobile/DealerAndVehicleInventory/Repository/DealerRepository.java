@@ -13,14 +13,6 @@ import java.util.Objects;
 
 @Repository
 public interface DealerRepository extends JpaRepository<Dealer, String> {
-    @EntityGraph
-    List<Dealer> findAll();
-
-
-//    @Query(value = "SELECT d.subscription_type, count(d.subscription_type) FROM dealer_table  d " +
-//            "where (:tenantId is null or d.tenant_id=:tenantId) " +
-//            " group by d.subscription_type",nativeQuery = true)
-//    List<Objects[]> countBySubscription(Integer tenantId);
 
     @Query(value = "SELECT d.subscription_type, COUNT(*) FROM dealer_table d " +
             "WHERE (:tenantId IS NULL OR d.tenant_id = :tenantId) " +

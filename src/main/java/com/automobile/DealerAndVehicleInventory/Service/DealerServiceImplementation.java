@@ -18,7 +18,7 @@ import java.util.*;
 @Service
 public class DealerServiceImplementation implements DealerService{
 
-    DealerRepository dealerRepository;
+    private DealerRepository dealerRepository;
 
     public DealerServiceImplementation(DealerRepository dealerRepository) {
         this.dealerRepository = dealerRepository;

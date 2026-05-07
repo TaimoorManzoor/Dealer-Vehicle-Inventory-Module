@@ -21,7 +21,7 @@ import java.util.List;
 @Tag(name = "Vehicle EndPoint")
 public class VehicleController {
 
-    VehicleService vehicleService;
+    private VehicleService vehicleService;
 
     public VehicleController(VehicleService vehicleService) {
         this.vehicleService = vehicleService;

@@ -19,7 +19,7 @@ import java.util.List;
 @RestController
 @Tag(name = "Dealer EndPoint")
 public class DealerController {
-    DealerService dealerService;
+    private DealerService dealerService;
 
     public DealerController(DealerService dealerService) {
         this.dealerService = dealerService;
